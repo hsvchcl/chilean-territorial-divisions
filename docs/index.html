@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="División político-administrativa de Chile (regiones, provincias y comunas). TypeScript ready, Zero dependencies.">
+    <meta name="keywords" content="Chile, regiones, provincias, comunas, TypeScript, npm, librería, geografía">
+    <meta name="author" content="Hans Vergara">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Chilean Territorial Divisions - NPM Package">
+    <meta property="og:description"
+        content="División político-administrativa de Chile (regiones, provincias y comunas). TypeScript ready, Zero dependencies.">
+    <meta property="og:image" content="https://hsvchcl.github.io/chilean-territorial-divisions/og-image.png">
+    <meta property="og:url" content="https://hsvchcl.github.io/chilean-territorial-divisions/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <title>Chilean Territorial Divisions - Regiones, Provincias y Comunas</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🇨🇱</text></svg>">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <nav class="nav">
+            <div class="nav-brand">
+                <span class="flag">🇨🇱</span>
+                <span class="brand-text">chilean-territorial-divisions</span>
+            </div>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#demo">Demo</a>
+                <a href="#api">API</a>
+                <a href="https://github.com/hsvchcl/chilean-territorial-divisions" target="_blank" class="github-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <div class="badge">v1.0.0 • MIT License</div>
+            <h1>Geografía de Chile <br><span class="gradient-text">fácil para devs</span></h1>
+            <p class="hero-description">
+                Librería completa para regiones, provincias y comunas. Includes ISO codes, CUT, and cascading select
+                helpers.
+            </p>
+
+            <div class="install-box">
+                <code>npm install chilean-territorial-divisions</code>
+                <button class="copy-btn" onclick="copyInstall()" aria-label="Copiar comando">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" />
+                        <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#demo" class="btn btn-primary">Ver Demo</a>
+                <a href="https://www.npmjs.com/package/chilean-territorial-divisions" target="_blank"
+                    class="btn btn-secondary">
+                    <svg width="18" height="18" viewBox="0 0 780 250" fill="currentColor">
+                        <path
+                            d="M240 250h100v-50h100V0H240v250zm100-200h50v100h-50V50zM480 0v200h100v50h100V0H480zm150 150h-50V50h50v100zM0 200h100v50h100V0H0v200zm100-50V50h50v100H50z" />
+                    </svg>
+                    Ver en npm
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M5 12l7 7 7-7" />
+            </svg>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Características</h2>
+            <p class="section-subtitle">Todo lo que necesitas para formularios y datos geográficos</p>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Zero Dependencies</h3>
+                    <p>Sin dependencias externas pesadas. Solo los datos que necesitas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📘</div>
+                    <h3>TypeScript First</h3>
+                    <p>Tipos robustos para Regiones, Provincias y Comunas incluidos.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Select Helpers</h3>
+                    <p>Funciones listas para usar en dropdowns en cascada (Región → Comuna).</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3>Búsqueda</h3>
+                    <p>Encuentra comunas por código CUT, nombre o ISO 3166-2.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3>ESM & CJS</h3>
+                    <p>Soporte dual para importaciones modernas y legacy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🏛️</div>
+                    <h3>Datos Oficiales</h3>
+                    <p>Basado en la última división política administrativa oficial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <h2 class="section-title">Demo Interactivo</h2>
+            <p class="section-subtitle">Prueba los selects en cascada</p>
+
+            <div class="code-tabs">
+                <button class="code-tab active" data-tab="full">Completo (Con Provincia)</button>
+                <button class="code-tab" data-tab="simple">Simple (Región → Comuna)</button>
+            </div>
+
+            <div class="demo-container code-panel active" id="panel-full">
+                <h3 class="demo-title">Cascada Completa</h3>
+                <p class="demo-subtitle">Selección con 3 niveles: Región → Provincia → Comuna</p>
+
+                <div class="demo-input-group">
+                    <label for="select-region">Región</label>
+                    <select id="select-region">
+                        <option value="">Seleccione Región...</option>
+                    </select>
+                </div>
+
+                <div class="demo-input-group">
+                    <label for="select-provincia">Provincia</label>
+                    <select id="select-provincia" disabled>
+                        <option value="">Seleccione Provincia...</option>
+                    </select>
+                </div>
+
+                <div class="demo-input-group">
+                    <label for="select-comuna">Comuna</label>
+                    <select id="select-comuna" disabled>
+                        <option value="">Seleccione Comuna...</option>
+                    </select>
+                </div>
+
+                <div id="result-display" class="demo-results hidden">
+                    <div class="result-card">
+                        <div class="result-header">
+                            <span>Selección JSON</span>
+                        </div>
+                        <pre id="json-output" class="result-json">{}</pre>
+                    </div>
+                </div>
+
+                <div class="demo-code">
+                    <h4>Código de ejemplo</h4>
+                    <div class="code-tabs code-tabs-small">
+                        <button class="code-tab active" data-code="full-ts">TypeScript</button>
+                        <button class="code-tab" data-code="full-react">React</button>
+                        <button class="code-tab" data-code="full-angular">Angular</button>
+                    </div>
+
+                    <div class="code-panel active" id="code-full-ts">
+                        <pre><code><span class="keyword">import</span> { 
+  getRegionOptions, 
+  getProvinciaOptions, 
+  getComunaOptions,
+  <span class="type">SelectOption</span>
+} <span class="keyword">from</span> <span class="string">'chilean-territorial-divisions'</span>;
+
+<span class="comment">// 1. Load regions</span>
+<span class="keyword">const</span> regiones: <span class="type">SelectOption</span>[] = getRegionOptions();
+
+<span class="comment">// 2. On region change</span>
+<span class="keyword">const</span> provincias = getProvinciaOptions(regionNumber);
+
+<span class="comment">// 3. On province change</span>
+<span class="keyword">const</span> comunas = getComunaOptions(regionNumber, provinciaName);</code></pre>
+                    </div>
+
+                    <div class="code-panel" id="code-full-react">
+                        <pre><code><span class="keyword">import</span> { useState } <span class="keyword">from</span> <span class="string">'react'</span>;
+<span class="keyword">import</span> { getRegionOptions, getProvinciaOptions, getComunaOptions } <span class="keyword">from</span> <span class="string">'chilean-territorial-divisions'</span>;
+
+<span class="keyword">export function</span> <span class="function">AddressForm</span>() {
+  <span class="keyword">const</span> [region, setRegion] = useState(<span class="string">''</span>);
+  <span class="keyword">const</span> [provincia, setProvincia] = useState(<span class="string">''</span>);
+  <span class="keyword">const</span> [comuna, setComuna] = useState(<span class="string">''</span>);
+
+  <span class="keyword">return</span> (
+    &lt;&gt;
+      &lt;select value={region} onChange={e =&gt; { setRegion(e.target.value); setProvincia(<span class="string">''</span>); }}&gt;
+        {getRegionOptions().map(o =&gt; &lt;option key={o.value} value={o.value}&gt;{o.label}&lt;/option&gt;)}
+      &lt;/select&gt;
+      &lt;select value={provincia} onChange={e =&gt; setProvincia(e.target.value)} disabled={!region}&gt;
+        {getProvinciaOptions(region).map(o =&gt; &lt;option key={o.value} value={o.value}&gt;{o.label}&lt;/option&gt;)}
+      &lt;/select&gt;
+      &lt;select value={comuna} onChange={e =&gt; setComuna(e.target.value)} disabled={!provincia}&gt;
+        {getComunaOptions(region, provincia).map(o =&gt; &lt;option key={o.value} value={o.value}&gt;{o.label}&lt;/option&gt;)}
+      &lt;/select&gt;
+    &lt;/&gt;
+  );
+}</code></pre>
+                    </div>
+
+                    <div class="code-panel" id="code-full-angular">
+                        <pre><code><span class="keyword">import</span> { Component } <span class="keyword">from</span> <span class="string">'@angular/core'</span>;
+<span class="keyword">import</span> { getRegionOptions, getProvinciaOptions, getComunaOptions, <span class="type">SelectOption</span> } <span class="keyword">from</span> <span class="string">'chilean-territorial-divisions'</span>;
+
+<span class="decorator">@Component</span>({ selector: <span class="string">'app-address'</span>, template: <span class="string">`
+  &lt;select [(ngModel)]="region" (change)="onRegionChange()"&gt;
+    &lt;option *ngFor="let r of regiones" [value]="r.value"&gt;{{r.label}}&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;select [(ngModel)]="provincia" (change)="onProvinciaChange()" [disabled]="!region"&gt;
+    &lt;option *ngFor="let p of provincias" [value]="p.value"&gt;{{p.label}}&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;select [(ngModel)]="comuna" [disabled]="!provincia"&gt;
+    &lt;option *ngFor="let c of comunas" [value]="c.value"&gt;{{c.label}}&lt;/option&gt;
+  &lt;/select&gt;
+`</span> })
+<span class="keyword">export class</span> <span class="type">AddressComponent</span> {
+  regiones = getRegionOptions();
+  provincias: <span class="type">SelectOption</span>[] = [];
+  comunas: <span class="type">SelectOption</span>[] = [];
+  region = <span class="string">''</span>; provincia = <span class="string">''</span>; comuna = <span class="string">''</span>;
+
+  onRegionChange() { <span class="keyword">this</span>.provincias = getProvinciaOptions(<span class="keyword">this</span>.region); }
+  onProvinciaChange() { <span class="keyword">this</span>.comunas = getComunaOptions(<span class="keyword">this</span>.region, <span class="keyword">this</span>.provincia); }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="demo-container code-panel" id="panel-simple">
+                <h3 class="demo-title">Región → Comuna Directa</h3>
+                <p class="demo-subtitle">Selección rápida sin pasar por provincia</p>
+
+                <div class="demo-input-group">
+                    <label for="simple-region">Región</label>
+                    <select id="simple-region">
+                        <option value="">Seleccione Región...</option>
+                    </select>
+                </div>
+
+                <div class="demo-input-group">
+                    <label for="simple-comuna">Comuna</label>
+                    <select id="simple-comuna" disabled>
+                        <option value="">Seleccione Comuna...</option>
+                    </select>
+                </div>
+
+                <div id="simple-result-display" class="demo-results hidden">
+                    <div class="result-card">
+                        <div class="result-header">
+                            <span>Selección JSON</span>
+                        </div>
+                        <pre id="simple-json-output" class="result-json">{}</pre>
+                    </div>
+                </div>
+
+                <div class="demo-code">
+                    <h4>Código de ejemplo</h4>
+                    <div class="code-tabs code-tabs-small">
+                        <button class="code-tab active" data-code="simple-ts">TypeScript</button>
+                        <button class="code-tab" data-code="simple-react">React</button>
+                        <button class="code-tab" data-code="simple-angular">Angular</button>
+                    </div>
+
+                    <div class="code-panel active" id="code-simple-ts">
+                        <pre><code><span class="keyword">import</span> { 
+  getRegionOptions, 
+  getComunaOptions,
+  <span class="type">SelectOption</span>
+} <span class="keyword">from</span> <span class="string">'chilean-territorial-divisions'</span>;
+
+<span class="comment">// 1. Load regions</span>
+<span class="keyword">const</span> regiones: <span class="type">SelectOption</span>[] = getRegionOptions();
+
+<span class="comment">// 2. On region change - load ALL comunas directly</span>
+<span class="keyword">const</span> comunas = getComunaOptions(regionNumber);
+<span class="comment">// ^ No second param = all comunas of the region</span></code></pre>
+                    </div>
+
+                    <div class="code-panel" id="code-simple-react">
+                        <pre><code><span class="keyword">import</span> { useState } <span class="keyword">from</span> <span class="string">'react'</span>;
+<span class="keyword">import</span> { getRegionOptions, getComunaOptions } <span class="keyword">from</span> <span class="string">'chilean-territorial-divisions'</span>;
+
+<span class="keyword">export function</span> <span class="function">SimpleAddressForm</span>() {
+  <span class="keyword">const</span> [region, setRegion] = useState(<span class="string">''</span>);
+  <span class="keyword">const</span> [comuna, setComuna] = useState(<span class="string">''</span>);
+
+  <span class="keyword">return</span> (
+    &lt;&gt;
+      &lt;select value={region} onChange={e =&gt; { setRegion(e.target.value); setComuna(<span class="string">''</span>); }}&gt;
+        {getRegionOptions().map(o =&gt; &lt;option key={o.value} value={o.value}&gt;{o.label}&lt;/option&gt;)}
+      &lt;/select&gt;
+      &lt;select value={comuna} onChange={e =&gt; setComuna(e.target.value)} disabled={!region}&gt;
+        {getComunaOptions(region).map(o =&gt; &lt;option key={o.value} value={o.value}&gt;{o.label}&lt;/option&gt;)}
+      &lt;/select&gt;
+    &lt;/&gt;
+  );
+}</code></pre>
+                    </div>
+
+                    <div class="code-panel" id="code-simple-angular">
+                        <pre><code><span class="keyword">import</span> { Component } <span class="keyword">from</span> <span class="string">'@angular/core'</span>;
+<span class="keyword">import</span> { getRegionOptions, getComunaOptions, <span class="type">SelectOption</span> } <span class="keyword">from</span> <span class="string">'chilean-territorial-divisions'</span>;
+
+<span class="decorator">@Component</span>({ selector: <span class="string">'app-simple-address'</span>, template: <span class="string">`
+  &lt;select [(ngModel)]="region" (change)="onRegionChange()"&gt;
+    &lt;option *ngFor="let r of regiones" [value]="r.value"&gt;{{r.label}}&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;select [(ngModel)]="comuna" [disabled]="!region"&gt;
+    &lt;option *ngFor="let c of comunas" [value]="c.value"&gt;{{c.label}}&lt;/option&gt;
+  &lt;/select&gt;
+`</span> })
+<span class="keyword">export class</span> <span class="type">SimpleAddressComponent</span> {
+  regiones = getRegionOptions();
+  comunas: <span class="type">SelectOption</span>[] = [];
+  region = <span class="string">''</span>; comuna = <span class="string">''</span>;
+
+  <span class="comment">// Load ALL comunas when region changes</span>
+  onRegionChange() { <span class="keyword">this</span>.comunas = getComunaOptions(<span class="keyword">this</span>.region); }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Reference Section -->
+    <section id="api" class="api-section">
+        <div class="container">
+            <h2 class="section-title">API Reference</h2>
+            <p class="section-subtitle">Funciones principales</p>
+
+            <div class="api-table-wrapper">
+                <table class="api-table">
+                    <thead>
+                        <tr>
+                            <th>Función</th>
+                            <th>Descripción</th>
+                            <th>Retorna</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>getRegiones()</code></td>
+                            <td>Obtiene todas las regiones</td>
+                            <td><code>Region[]</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>getRegionOptions()</code></td>
+                            <td>Opciones para select de regiones</td>
+                            <td><code>SelectOption[]</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>getProvinciaOptions(region)</code></td>
+                            <td>Opciones de provincias por región</td>
+                            <td><code>SelectOption[]</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>getComunaOptions(region, prov?)</code></td>
+                            <td>Opciones de comunas (filtrado opcional)</td>
+                            <td><code>SelectOption[]</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>getComunaByCode(cut)</code></td>
+                            <td>Busca comuna por código CUT</td>
+                            <td><code>ComunaSearchResult</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>searchComunas(query)</code></td>
+                            <td>Busca comunas por texto</td>
+                            <td><code>ComunaSearchResult[]</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="flag">🇨🇱</span>
+                    <span>chilean-territorial-divisions</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.npmjs.com/package/chilean-territorial-divisions" target="_blank">npm</a>
+                    <a href="https://github.com/hsvchcl/chilean-territorial-divisions" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <p class="footer-copy">
+                Hecho por Hans Vergara con ❤️ en Chile • <span id="year">2026</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="lib.js"></script>
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        function copyInstall() {
+            navigator.clipboard.writeText('npm install chilean-territorial-divisions');
+            const btn = document.querySelector('.copy-btn');
+            btn.classList.add('copied');
+            setTimeout(() => btn.classList.remove('copied'), 2000);
+        }
+    </script>
+</body>
+
+</html>
