@@ -1,6 +1,6 @@
 {
     "name": "chilean-territorial-divisions",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Political and administrative divisions of Chile: regions, provinces, and communes",
     "type": "module",
     "main": "./dist/index.cjs",
