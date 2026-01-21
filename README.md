@@ -2,7 +2,7 @@
 
 Political and administrative divisions of Chile: regions, provinces, and communes.
 
-[![npm version](https://badge.fury.io/js/chilean-territorial-divisions.svg)](https://www.npmjs.com/package/chilean-territorial-divisions)
+[![npm version](https://img.shields.io/npm/v/chilean-territorial-divisions.svg)](https://www.npmjs.com/package/chilean-territorial-divisions)
 [![TypeScript](https://img.shields.io/badge/TypeScript-Ready-blue.svg)](https://www.typescriptlang.org/)
 
 ## Installation

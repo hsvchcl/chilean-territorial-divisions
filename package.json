@@ -1,7 +1,7 @@
 {
     "name": "chilean-territorial-divisions",
-    "version": "1.0.0",
-    "description": "División político-administrativa de Chile: regiones, provincias y comunas",
+    "version": "1.0.1",
+    "description": "Political and administrative divisions of Chile: regions, provinces, and communes",
     "type": "module",
     "main": "./dist/index.cjs",
     "module": "./dist/index.js",
@@ -44,6 +44,10 @@
     "repository": {
         "type": "git",
         "url": "https://github.com/hsvchcl/chilean-territorial-divisions.git"
+    },
+    "homepage": "https://hsvchcl.github.io/chilean-territorial-divisions",
+    "engines": {
+        "node": ">=16"
     },
     "devDependencies": {
         "tsup": "^8.0.0",
