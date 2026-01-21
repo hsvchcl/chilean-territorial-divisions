@@ -193,4 +193,4 @@ Includes official codes:
 
 ## License
 
-MIT © Hans
+MIT © Hans Steven Vergara Chamorro
